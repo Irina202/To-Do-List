@@ -48,3 +48,10 @@ justify-content: space-around;
 margin-right: 1rem;
 }
 
+header, footer {
+  padding: 0.8rem;
+}
+
+main {
+  padding: 0.8rem;
+}
