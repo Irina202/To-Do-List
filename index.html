@@ -49,6 +49,11 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
+        <section class="Name">
+          <label for="person">Name</label>
+          <input type="text" name="person" id="person">
+          </section>
+        <hr>
         <section class="description">
           <label for="content">Description</label>
           <input type="text" name="content" id="content">
@@ -62,7 +67,7 @@
         <hr>
        
         <section class="AssignedTo">
-          <label for="member">AssignedTo</label>
+          <label for="member">Assigned To</label>
           <select name="member" id="member">
             <option value="Aiden"></option>
             <option value="Iryna"></option>
@@ -71,6 +76,15 @@
           </select>
         </section>
         <hr>
+
+        <section class="AssignedTo">
+            <select class="form-select" id="floatingSelect" aria-label="Floating label select example">     
+              <option selected>Assigned To</option>
+              <option value="1">Aiden</option>
+              <option value="2">Iryna</option>
+              <option value="3">Andy</option>
+            </select>
+        </section>
         
         <section class="status-selection">
           <label for="situation">Status</label>
@@ -82,7 +96,19 @@
             <option value="DONE"></option>
           </datalist>
         </section>
+
+        <section class="status-selection">
+            <select class="form-select" id="floatingSelect" aria-label="Floating label select example">     
+              <option selected>Status</option>
+              <option value="1">TODO</option>
+              <option value="2">IN PROGRESS</option>
+              <option value="3">REVIEW</option>
+              <option value="4">DONE</option>
+            </select>
+        </section>
+        
       </div>
+
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Reset</button>
         <button type="button" class="btn btn-primary">Submit</button>
