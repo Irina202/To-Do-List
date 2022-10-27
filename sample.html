@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="sample.css">
+    <title>My To-Do App!</title>
+  </head>
+  <body>
+    <main class="allstuff">
+     <h1>Tasks</h1>
+    
+     <!-- option 1 -->
+     <section class="container">
+     <form action="sample.html" method="post">
+      <label for="fname">Name:</label>
+      <input type="text" id="fname" name="fname">
+      <br>
+      <label for="content">Description:</label>
+      <input type="text" id="content" name="content">
+      <br>
+      <label for="assigned">AssignedTo:</label>
+      <select id="name" name="name">
+        <option value=""></option>
+        <option value="Aiden">Aiden</option>
+        <option value="Iryna">Iryna</option>
+        <option value="Andy">Andy</option>
+      </select>
+      <br>
+      <label for="duetime">DueDate:</label>
+      <input type="date" id="duetime" name="duetime">
+      <br>
+      <label for="progress">Status:</label>
+      <select id="status" name="status">
+        <option value=""></option>
+        <option value="TODO">TODO</option>
+        <option value="In Progress">In Progress</option>
+        <option value="REVIEW">REVIEW</option>
+        <option value="Done">Done</option>
+      </select>
+    </form>
+
+      <div class="subbut">
+        <button class="button button1">In Progress</button>
+        <button class="button button2">Done</button>
+        <button class="button button3">Delete</button>
+      </div>
+
+     </section>
+
+    </main>
+  </body>
+</html>

@@ -1,0 +1,49 @@
+h1{
+    background-color: rgb(99, 184, 184);
+    padding: 30px;
+    text-align: center;
+    font-size: 35px;
+    color: white;
+  }
+  
+  
+  form{
+    text-align: center;
+    font-size: 20px;
+  }
+  
+  label {
+    width: 400px;
+  }
+  
+  .container{
+    height: 200px;
+    position: relative;
+    border: 3px solid green;
+    display: inline-block;  
+    justify-content: center;  
+    align-items: center;  
+  }
+  
+  
+  .button {
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer; 
+  }
+  
+  .button1 {
+    background-color: blue;
+  } 
+  
+  .button2 {
+    background-color: green;
+  }
+  
+  .button3 {
+    background-color: red;
+  }
