@@ -37,3 +37,14 @@ a {
  .btn-primary {
   margin-top: 1rem;
 }
+
+.taskCards {
+display: flex;
+flex-wrap: wrap;
+justify-content: space-around;
+}
+
+.taskCards .btn {
+margin-right: 1rem;
+}
+
