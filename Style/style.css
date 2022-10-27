@@ -4,15 +4,36 @@ html, body {
   font-size: 14px;
   font-family: 'Roboto Serif', serif;
   background-color: rgb(86, 179, 225);
+  color: rgb(17, 17, 17);
+}
+
+.modal-header{
+  background-color: skyblue;
+  height: 4rem;
+}
+.mainHeading {
+  margin: 2.5rem;
   color: white;
+}
+
+button .close {
+  background-color: red;
 }
 
 h1 {
   text-align: center;
-  margin-top: 2rem;
+
 }
 
 
 a {
   margin-left: 1rem;
+}
+
+.container {
+  text-align: center;
+}
+
+ .btn-primary {
+  margin-top: 1rem;
 }
