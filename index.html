@@ -16,6 +16,7 @@
      <a class="Login" href="#">Log in</a>
   </nav>
 </header>
+
 <main class="app-main container">
   <div class="mainHeading">
   <h1>My To-Do App</h1>
@@ -63,15 +64,17 @@
               </div>
 
               <div class="form-group"> <!-- Date input -->
-                <label class="control-label" for="date">Date</label>
+                <label class="control-label" for="date">Due Date</label>
                 <input class="form-control" id="date" name="date" placeholder="MM/DD/YYY" type="text"/>
               </div>
 
               <div class="form-group">
                 <label for="exampleFormControlSelect1">Status:</label>
                 <select class="form-control" id="exampleFormControlSelect1">
+                  <option>To-Do</option>
                   <option>In Progress</option>
-                  <option>Completed</option>
+                  <option>Review</option>
+                  <option>Done</option>
                 </select>
               </div>
 
