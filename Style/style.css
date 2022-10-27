@@ -1,0 +1,18 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  font-family: 'Roboto Serif', serif;
+  background-color: rgb(86, 179, 225);
+  color: white;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+
+a {
+  margin-left: 1rem;
+}
