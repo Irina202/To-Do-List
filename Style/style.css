@@ -16,6 +16,7 @@ html, body {
 header, footer {
   padding: 0.8rem;
   background-color: var(--dark-cabbage);
+  height: 3.4rem;
 }
 
 main {
