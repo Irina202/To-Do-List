@@ -7,6 +7,30 @@ html, body {
   color: rgb(17, 17, 17);
 }
 
+header, footer {
+  padding: 0.8rem;
+}
+
+main {
+  padding: 0.8rem;
+}
+
+footer{
+  width:100%;
+  position:fixed;
+  bottom:0px;
+  left:0px;
+}
+
+h1 {
+  text-align: center;
+
+}
+
+a {
+  margin-left: 1rem;
+}
+
 .modal-header{
   background-color: skyblue;
   height: 4rem;
@@ -18,16 +42,6 @@ html, body {
 
 button .close {
   background-color: red;
-}
-
-h1 {
-  text-align: center;
-
-}
-
-
-a {
-  margin-left: 1rem;
 }
 
 .container {
@@ -48,10 +62,4 @@ justify-content: space-around;
 margin-right: 1rem;
 }
 
-header, footer {
-  padding: 0.8rem;
-}
 
-main {
-  padding: 0.8rem;
-}
