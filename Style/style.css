@@ -1,14 +1,21 @@
+:root{
+  --blue: #87BCDE;
+  --light-cabbage: #805E73;
+  --dark-cabbage: #4E4D5C;
+
+}
+
 html, body {
   margin: 0;
   padding: 0;
   font-size: 14px;
   font-family: 'Roboto Serif', serif;
-  background-color: rgb(86, 179, 225);
   color: rgb(17, 17, 17);
 }
 
 header, footer {
   padding: 0.8rem;
+  background-color: var(--dark-cabbage);
 }
 
 main {
@@ -24,7 +31,6 @@ footer{
 
 h1 {
   text-align: center;
-
 }
 
 a {
@@ -46,6 +52,7 @@ button .close {
 
 .container {
   text-align: center;
+  margin-bottom: 50px;
 }
 
  .btn-primary {
@@ -62,4 +69,6 @@ justify-content: space-around;
 margin-right: 1rem;
 }
 
-
+.card-body{
+  background-color: var(--blue);
+}
