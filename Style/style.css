@@ -1,32 +1,34 @@
-:root{
-  --blue: #87BCDE;
-  --light-cabbage: #805E73;
-  --dark-cabbage: #4E4D5C;
-
+:root {
+  --blue: #87bcde;
+  --light-cabbage: lightgray;
+  --dark-cabbage: gray;
 }
 
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
   font-size: 14px;
-  font-family: 'Roboto Serif', serif;
+  font-family: "Roboto Serif", serif;
   color: rgb(17, 17, 17);
 }
 
-header, footer {
+header,
+footer {
   padding: 0.8rem;
   background-color: var(--dark-cabbage);
+  height: 3.4rem;
 }
 
 main {
   padding: 0.8rem;
 }
 
-footer{
-  width:100%;
-  position:fixed;
-  bottom:0px;
-  left:0px;
+footer {
+  width: 100%;
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
 }
 
 h1 {
@@ -35,7 +37,7 @@ h1 {
 }
 
 a {
-  margin-left:1rem;
+  margin-left: 1rem;
 }
 
 .container {
@@ -43,11 +45,12 @@ a {
   margin-bottom: 50px;
 }
 
-.SignUp, .Login{
+.SignUp,
+.Login {
   color: white;
 }
 
-.modal-header{
+.modal-header {
   background-color: var(--blue);
   height: 4rem;
 }
@@ -61,35 +64,34 @@ button .close {
   background-color: red;
 }
 
- .btn-primary {
+.btn-primary {
   margin-top: 1rem;
 }
 
 .taskCards {
-display: flex;
-flex-wrap: wrap;
-justify-content: space-around;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 
 .taskCards .btn {
-margin-right: 1rem;
+  margin-right: 1rem;
 }
 
-.card-body{
+.card-body {
   background-color: var(--blue);
 }
 
-.btn-primary{
+.btn-primary {
   background-color: var(--light-cabbage);
 }
 
-
-.form-group{
+.form-group {
   display: flex;
-    flex-direction: column;
-    align-items: baseline;
+  flex-direction: column;
+  align-items: baseline;
 }
 
-.link__generation{
+.link__generation {
   color: white;
 }
