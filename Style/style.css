@@ -95,3 +95,10 @@ button .close {
 .link__generation {
   color: white;
 }
+
+#date {
+  color: black;
+  text-align: center;
+  margin-top: 20px;
+
+}
