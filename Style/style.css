@@ -1,7 +1,7 @@
 :root{
   --blue: #87BCDE;
-  --light-cabbage: #805E73;
-  --dark-cabbage: #4E4D5C;
+  --light-cabbage: lightgray;
+  --dark-cabbage: gray;
 
 }
 
