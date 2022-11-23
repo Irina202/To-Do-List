@@ -41,6 +41,32 @@ function validateDescriptonInput() {
 }
 submit.addEventListener("click", validateDescriptonInput);
 
+function ddAssign() {
+
+  let optionSelIndex = assignTo.options[assignTo.selectedIndex].value;
+  let optionSelectedText = assignTo.options[assignTo.selectedIndex].text;
+  if (optionSelIndex == 0) {
+      alert("Please choose a person");
+  }
+  else {
+      console.log("This task assign to : " + optionSelectedText); ;
+  }
+}
+submit.addEventListener("click", ddAssign);
+
+function ddStatus() {
+
+  let optionSelIndex = taskStatus.options[taskStatus.selectedIndex].value;
+  let optionSelectedText = taskStatus.options[taskStatus.selectedIndex].text;
+  if (optionSelIndex == 0) {
+      alert("Please choose a status");
+  }
+  else {
+      console.log("Status : " + optionSelectedText); ;
+  }
+}
+submit.addEventListener("click", ddStatus);
+
 function inputPlaceholders () {
   nameInput.placeholder = 'Type your name';
   descriptionInput.placeholder = 'Type your description';
