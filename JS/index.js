@@ -9,6 +9,8 @@ window.onload = function () {
   document.getElementById("date").innerHTML = `Date: ${currentDate}`;
 };
 
+// Validations
+
 const nameInput = document.querySelector("#nameInput");
 const submit = document.querySelector("#submit");
 const errMsg = document.querySelector("#errMsg");
@@ -17,7 +19,6 @@ function validateNamInput() {
   if (nameInput.value.length < 8) {
     errMsg.innerText = "Length should be longer than 8";
     errMsg.style.color = "red";
-    myName2.focus();
   } else {
     errMsg.innerText = "";
   }
