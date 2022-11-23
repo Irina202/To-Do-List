@@ -31,7 +31,7 @@
     <main>
       <div class="mainHeading">
         <h1>My To-Do App</h1>
-        <h4 id='date'></h4>
+        <h4 id="date"></h4>
       </div>
       <div class="container">
         <!-- Button to Open the Modal -->
@@ -60,6 +60,7 @@
               <div class="modal-body">
                 <form>
                   <div class="form-group">
+                    <span id="errMsg"></span>
                     <label for="formGroupExampleInput">Name:</label>
                     <input
                       type="text"
@@ -70,9 +71,7 @@
                   </div>
 
                   <div class="form-group">
-                    <label for="descriptionInput"
-                      >Description:</label
-                    >
+                    <label for="descriptionInput">Description:</label>
                     <textarea
                       class="form-control"
                       id="descriptionInput"
@@ -116,7 +115,9 @@
 
                 <!-- Modal footer -->
                 <div class="modal-footer">
-                  <button type="button" class="btn btn-success">Submit</button>
+                  <button type="button" class="btn btn-success" id="submit">
+                    Submit
+                  </button>
                   <button type="button" class="btn btn-info">Reset</button>
                 </div>
               </div>
