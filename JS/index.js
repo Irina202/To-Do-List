@@ -15,10 +15,10 @@ const nameInput = document.querySelector("#nameInput");
 const submit = document.querySelector("#submit");
 const nameErr = document.querySelector(".nameErr");
 const descErr = document.querySelector(".descErr");
-const descriptionInput = document.getElementById('descriptionInput');
-const assignTo = document.getElementById('assignInput');
-const dueDate = document.getElementById('date');
-const taskStatus = document.getElementById('status-id');
+const descriptionInput = document.getElementById("descriptionInput");
+const assignTo = document.getElementById("assignInput");
+const dueDate = document.getElementById("date");
+const taskStatus = document.getElementById("status-id");
 
 function validateNamInput() {
   if (nameInput.value.length < 8) {
@@ -42,33 +42,29 @@ function validateDescriptonInput() {
 submit.addEventListener("click", validateDescriptonInput);
 
 function ddAssign() {
-
   let optionSelIndex = assignTo.options[assignTo.selectedIndex].value;
   let optionSelectedText = assignTo.options[assignTo.selectedIndex].text;
   if (optionSelIndex == 0) {
-      alert("Please choose a person");
-  }
-  else {
-      console.log("This task assign to : " + optionSelectedText); ;
+    alert("Please choose a person");
+  } else {
+    console.log("This task assign to : " + optionSelectedText);
   }
 }
 submit.addEventListener("click", ddAssign);
 
 function ddStatus() {
-
   let optionSelIndex = taskStatus.options[taskStatus.selectedIndex].value;
   let optionSelectedText = taskStatus.options[taskStatus.selectedIndex].text;
   if (optionSelIndex == 0) {
-      alert("Please choose a status");
-  }
-  else {
-      console.log("Status : " + optionSelectedText); ;
+    alert("Please choose a status");
+  } else {
+    console.log("Status : " + optionSelectedText);
   }
 }
 submit.addEventListener("click", ddStatus);
 
-function inputPlaceholders () {
-  nameInput.placeholder = 'Type your name';
-  descriptionInput.placeholder = 'Type your description';
+function inputPlaceholders() {
+  nameInput.placeholder = "Type your name";
+  descriptionInput.placeholder = "Type your description";
 }
-inputPlaceholders()
+inputPlaceholders();
