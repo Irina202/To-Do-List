@@ -13,15 +13,36 @@ window.onload = function () {
 
 const nameInput = document.querySelector("#nameInput");
 const submit = document.querySelector("#submit");
-const errMsg = document.querySelector("#errMsg");
+const nameErr = document.querySelector(".nameErr");
+const descErr = document.querySelector(".descErr");
+const descriptionInput = document.getElementById('descriptionInput');
+const assignTo = document.getElementById('assignInput');
+const dueDate = document.getElementById('date');
+const taskStatus = document.getElementById('status-id');
 
 function validateNamInput() {
   if (nameInput.value.length < 8) {
-    errMsg.innerText = "Length should be longer than 8";
-    errMsg.style.color = "red";
+    nameErr.innerText = "Length should be longer than 8";
+    nameErr.style.color = "red";
   } else {
-    errMsg.innerText = "";
+    nameErr.innerText = "";
   }
 }
 
 submit.addEventListener("click", validateNamInput);
+
+function validateDescriptonInput() {
+  if (nameInput.value.length < 15) {
+    descErr.innerText = "Length should be longer than 15";
+    descErr.style.color = "red";
+  } else {
+    descErr.innerText = "";
+  }
+}
+submit.addEventListener("click", validateDescriptonInput);
+
+function inputPlaceholders () {
+  nameInput.placeholder = 'Type your name';
+  descriptionInput.placeholder = 'Type your description';
+}
+inputPlaceholders()
