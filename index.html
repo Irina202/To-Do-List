@@ -31,7 +31,7 @@
     <main>
       <div class="mainHeading">
         <h1>My To-Do App</h1>
-        <h4 id="date"></h4>
+        <h4 id="date-title"></h4>
       </div>
       <div class="container">
         <!-- Button to Open the Modal -->
@@ -93,13 +93,16 @@
 
                   <div class="form-group">
                     <!-- Date input -->
+                    <span class="date-err d-none" style="color: red"
+                      >Due Date is required and must be in the future</span
+                    >
                     <label class="control-label" for="date">Due Date</label>
                     <input
                       class="form-control"
                       id="date"
                       name="date"
                       placeholder="MM/DD/YYY"
-                      type="text"
+                      type="date"
                     />
                   </div>
 

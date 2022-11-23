@@ -6,7 +6,7 @@ window.onload = function () {
   let year = date.getFullYear();
 
   let currentDate = `${day}-${month}-${year}`;
-  document.getElementById("date").innerHTML = `Date: ${currentDate}`;
+  document.getElementById("date-title").innerHTML = `Date: ${currentDate}`;
 };
 
 // Validations
@@ -20,7 +20,7 @@ const assignTo = document.getElementById("assignInput");
 const dueDate = document.getElementById("date");
 const taskStatus = document.getElementById("status-id");
 
-function validateNamInput() {
+function validateNameInput() {
   if (nameInput.value.length < 8) {
     nameErr.innerText = "Length should be longer than 8";
     nameErr.style.color = "red";
@@ -28,8 +28,6 @@ function validateNamInput() {
     nameErr.innerText = "";
   }
 }
-
-submit.addEventListener("click", validateNamInput);
 
 function validateDescriptonInput() {
   if (nameInput.value.length < 15) {
@@ -39,22 +37,46 @@ function validateDescriptonInput() {
     descErr.innerText = "";
   }
 }
-submit.addEventListener("click", validateDescriptonInput);
+
+function isDueDateValid() {
+  const dateRaw = document.querySelector("#date").value;
+  return !!dateRaw && new Date(dateRaw) > new Date();
+}
 
 function ddAssign() {
   let optionSelectedText = assignTo.options[assignTo.selectedIndex].text;
   console.log("This task assign to : " + optionSelectedText);
 }
-submit.addEventListener("click", ddAssign);
 
 function ddStatus() {
   let optionSelectedText = taskStatus.options[taskStatus.selectedIndex].text;
   console.log("Status : " + optionSelectedText);
 }
-submit.addEventListener("click", ddStatus);
 
 function inputPlaceholders() {
   nameInput.placeholder = "Type your name";
   descriptionInput.placeholder = "Type your description";
 }
 inputPlaceholders();
+
+submit.addEventListener("click", () => {
+  ddAssign();
+  ddStatus();
+
+  const isNameValid = validateNameInput();
+  const isDescriptionValid = validateDescriptonInput();
+  const dueDateValid = isDueDateValid();
+
+  const dueDateErr = document.querySelector(".date-err");
+  if (!dueDateValid) {
+    dueDateErr.classList.remove("d-none");
+  } else {
+    dueDateErr.classList.add("d-none");
+  }
+
+  const formValid = isNameValid && isDescriptionValid && dueDateValid;
+
+  if (formValid) {
+    // Dodaj novu karticu
+  }
+});
