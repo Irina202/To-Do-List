@@ -78,6 +78,16 @@ button .close {
   margin-right: 1rem;
 }
 
+.card {
+  width: 25rem;
+  margin-top: 5rem;
+}
+
+.card-description {
+  max-height: 70px;
+  overflow: scroll;
+}
+
 .card-body {
   background-color: var(--blue);
 }
@@ -100,5 +110,4 @@ button .close {
   color: black;
   text-align: center;
   margin-top: 20px;
-
 }

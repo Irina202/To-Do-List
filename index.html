@@ -77,6 +77,7 @@
                       class="form-control"
                       id="descriptionInput"
                       rows="3"
+                      required
                     ></textarea>
                   </div>
 
@@ -121,7 +122,7 @@
                   <button type="button" class="btn btn-success" id="submit">
                     Submit
                   </button>
-                  <button type="button" class="btn btn-info">Reset</button>
+                  <button type="button" class="btn btn-info" id="reset">Reset</button>
                 </div>
               </div>
             </div>
@@ -129,7 +130,25 @@
         </div>
         <!-- task card section -->
         <section class="taskCards" id="additem">
-          <div class="card" style="width: 25rem; margin-top: 5rem">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-name"><strong>Task name:</strong> Tom</h5>
+              <h6 class="card-date mb-2 text-muted">Due Date: 14/10/1990</h6>
+                <p class="card-description">
+                  <strong>Description:</strong>
+                  "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet,
+                  consectetur, adipisci velit..."
+                </p>
+              <p class="task-status"><strong>Status:</strong></p>
+              <button type="button" class="btn btn-outline-success">
+                Done
+              </button>
+              <button type="button" class="btn btn-outline-danger">
+                Delete
+              </button>
+            </div>
+          </div>
+          <div class="card">
             <div class="card-body">
               <h5 class="card-name"><strong>Task name:</strong> Tom</h5>
               <h6 class="card-date mb-2 text-muted">Due Date: 14/10/1990</h6>
@@ -147,7 +166,7 @@
               </button>
             </div>
           </div>
-          <div class="card" style="width: 25rem; margin-top: 5rem">
+          <div class="card">
             <div class="card-body">
               <h5 class="card-name"><strong>Task name:</strong> Tom</h5>
               <h6 class="card-date mb-2 text-muted">Due Date: 14/10/1990</h6>
@@ -165,7 +184,7 @@
               </button>
             </div>
           </div>
-          <div class="card" style="width: 25rem; margin-top: 5rem">
+          <div class="card">
             <div class="card-body">
               <h5 class="card-name"><strong>Task name:</strong> Tom</h5>
               <h6 class="card-date mb-2 text-muted">Due Date: 14/10/1990</h6>
@@ -183,25 +202,7 @@
               </button>
             </div>
           </div>
-          <div class="card" style="width: 25rem; margin-top: 5rem">
-            <div class="card-body">
-              <h5 class="card-name"><strong>Task name:</strong> Tom</h5>
-              <h6 class="card-date mb-2 text-muted">Due Date: 14/10/1990</h6>
-              <p class="card-description">
-                <strong>Description:</strong>
-                "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet,
-                consectetur, adipisci velit..."
-              </p>
-              <p class="task-status"><strong>Status:</strong></p>
-              <button type="button" class="btn btn-outline-success">
-                Done
-              </button>
-              <button type="button" class="btn btn-outline-danger">
-                Delete
-              </button>
-            </div>
-          </div>
-          <div class="card" style="width: 25rem; margin-top: 5rem">
+          <div class="card">
             <div class="card-body">
               <h5 class="card-name"><strong>Task name:</strong> Tom</h5>
               <h6 class="card-date mb-2 text-muted">Due Date: 14/10/1990</h6>
