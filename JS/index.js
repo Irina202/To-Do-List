@@ -80,32 +80,37 @@ getDate()
 //Adding a class
 
 
-submit.addEventListener("click", () => {
-  let taskName = nameInput.value;
-  let description = descriptionInput.value;
-  let dueData = dueDate.value;
-  let assignName = assignTo.options[assignTo.selectedIndex].text;
-  console.log(assignName)
-  let optionSelectedText = taskStatus.options[taskStatus.selectedIndex].text;
-  console.log(optionSelectedText)
+
 
   // let id = Math.random().toString(16).slice(2);
   // console.log(id)
+  class TaskManager {
+    constructor(name, assign, dueDate2, description, status, id) {
+      this.name = name;
+      this.assign = assign;
+      this.dueDate2 = dueDate2;
+      this.description = description;
+      this.status = status;
+      this.id = id;
+    }
+}
+//function to add card on HTML page and to the array
+let toarray = [];
+let i = 0;
 
-
-function addItem(item){
+function addItem(addItemToArray){
   const itemHTML = '<div class="card">\n' +
-  '<div class="card-body" id='+item.id+'>\n' +
-   ' <h5 class="card-name"><strong>Task name:</strong>'+item.name+'</h5>\n' +
-   ' <h6 class="card-date mb-2 text-muted">Due Date: '+item.dueDate+'</h6>\n' +
-   '<p class="task-status output"><strong>Assign to : '+item.assign+'</strong></p>\n' +
+  '<div class="card-body" id='+ i +'>\n' +
+   ' <h5 class="card-name"><strong>Task name:</strong>'+addItemToArray.name+'</h5>\n' +
+   ' <h6 class="card-date mb-2 text-muted">Due Date: '+addItemToArray.dueDate2+'</h6>\n' +
+   '<p class="task-status output"><strong>Assign to : '+addItemToArray.assign+'</strong></p>\n' +
    '<div class="card-scroll">\n'+
     '<p class="card-description">\n' +
      ' <strong>Description:</strong>\n' +
-     ' '+item.description+'\n' +
+     ' '+addItemToArray.description+'\n' +
    ' </p>\n' +
    '  </div>\n' +
-   '<p class="task-status"><strong>Status : '+item.status+'</strong></p>\n' +
+   '<p class="task-status"><strong>Status : '+addItemToArray.status+'</strong></p>\n' +
    '<button type="button" class="btn btn-outline-success">\n' +
    ' Done\n' +
  ' </button>\n' +
@@ -116,28 +121,46 @@ function addItem(item){
 '</div>';
   const itemsContainer = document.getElementById("additem");
   itemsContainer.innerHTML += itemHTML;
+  let newCard = new TaskManager(addItemToArray.name, addItemToArray.assign, addItemToArray.dueDate, addItemToArray.description, addItemToArray.status, i);
+  toarray.unshift(newCard);
 }
 
-addItem({
+
+   function createCard() {
+    let taskName = nameInput.value;
+    let assignName = assignTo.value;
+    let dueDate2 = dueDate.value;
+    let description = descriptionInput.value;
+    let optionSelectedText = document.getElementById("status-id").value;
+    
+    i += 1;
+
+    let addItemToArray = {
+      'id' : i,
+      'name': taskName,
+      'description': description,
+      'dueDate' : dueDate2,
+      'assign' : assignName,
+      'status' : optionSelectedText,
+       }
+    
+    addItem(addItemToArray);
+
+    const form = document.getElementById('myform');
+    form.reset();
+    console.log(addItemToArray);
+    console.log(toarray);
+    //localStorage.setItem('toarray', JSON.stringify(addItemToArray));
+};
+submit.addEventListener("click", createCard);
+/*let addItem({
    id : id,
   'name': taskName,
   'description': description,
   'dueDate' : dueData,
   'assign' : assignName ,
   'status' : optionSelectedText,
-   })
-
-
-
-// let toarray = [];
-// let addItemToArray = {
-//   id : id,
-//  'name': taskName,
-//  'description': description,
-//  'dueDate' : dueData,
-//  'assign' : assignName ,
-//  'status' : optionSelectedText,
-//   }
+   });*/
 
 //   toarray.push(addItemToArray)
 
@@ -157,7 +180,7 @@ addItem({
     //let storedTodos = JSON.parse(localStorage.getItem("todoarray"));
 
     //console.log(storedTodos)
-  })
+ // })
   // window.addEventListener("load", () => loadPage());
   // function loadPage() {
   //     function fetchData () {
