@@ -49,6 +49,10 @@ a {
 .Login {
   color: white;
 }
+.current-date{
+  color: #000;
+  text-align: center;
+}
 
 .modal-header {
   background-color: var(--blue);

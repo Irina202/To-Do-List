@@ -96,7 +96,7 @@ class TaskManager {
 let toarray = [];
 let i = 0;
 
-function addItem(item) {    
+function addItem(item) {
   const itemHTML = '<div class="card">\n' +
   '<div class="card-body" id='+ i +'>\n' +
   ' <h5 class="card-name"><strong>Task name:</strong>'+item.name+'</h5>\n' +
@@ -120,8 +120,6 @@ function addItem(item) {
   i=item.id;
   const itemsContainer = document.getElementById("additem");
   itemsContainer.innerHTML += itemHTML;
-  let newCard = new TaskManager(addItemToArray.name, addItemToArray.assign, addItemToArray.dueDate, addItemToArray.description, addItemToArray.status, i);
-  toarray.unshift(newCard);
 }
 
 
@@ -154,7 +152,6 @@ function addItem(item) {
     addItem(addItemToArray);
     let newCard = new TaskManager(addItemToArray.name, addItemToArray.assign, addItemToArray.dueDate, addItemToArray.description, addItemToArray.status, i);
     toarray.unshift(newCard);
-    
     form.reset();
     console.log(addItemToArray);
     console.log(toarray);
