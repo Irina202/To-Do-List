@@ -21,6 +21,8 @@ const assignTo = document.getElementById("assignInput");
 const dueDate = document.getElementById("date");
 const taskStatus = document.getElementById("status-id");
 
+
+
 function validateNameInput() {
   if (nameInput.value.length < 8) {
     nameErr.innerText = "Length should be longer than 8";
@@ -126,6 +128,7 @@ function addItem(addItemToArray){
 }
 
 
+
    function createCard() {
     let taskName = nameInput.value;
     let assignName = assignTo.value;
@@ -153,47 +156,21 @@ function addItem(addItemToArray){
     //localStorage.setItem('toarray', JSON.stringify(addItemToArray));
 };
 submit.addEventListener("click", createCard);
-/*let addItem({
-   id : id,
-  'name': taskName,
-  'description': description,
-  'dueDate' : dueData,
-  'assign' : assignName ,
-  'status' : optionSelectedText,
-   });*/
 
-//   toarray.push(addItemToArray)
 
-//   console.log(toarray)
 
-//  const addTasks = (task) => {
-//   const updatedTodoList = toDoList.map((todo) => {
-//      if(todo.id === task.id){
-//       todo.tasks.push(task);
-//      }
-//      return todo;
-//   })
-//   setToDoList(updatedTodoList);
+
+// function doneToDo () {
+//   let optionSelectedText = document.getElementById("status-id").value;
+//   console.log(optionSelectedText)
+
 // }
-
-   // localStorage.setItem("todoarray", JSON.stringify(arr));
-    //let storedTodos = JSON.parse(localStorage.getItem("todoarray"));
-
-    //console.log(storedTodos)
- // })
-  // window.addEventListener("load", () => loadPage());
-  // function loadPage() {
-  //     function fetchData () {
-  //         fetch("https://jwd09-task-api.herokuapp.com")
-  //         .then(resp => resp.json())
-  //         .then(data => console.log(data))
-  //         .then(err => console.log(err))
-  //     }
-  //     fetchData()
-  // }
-
-
-
+// doneTaskBtn.addEventListener("click", doneToDo)
+// doneToDo()
+// doneTaskBtn.addEventListener("click", () => {
+//   let optionSelectedText = document.getElementById("status-id").value;
+//   console.log(optionSelectedText)
+// });
 
 
 
