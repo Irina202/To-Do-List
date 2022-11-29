@@ -19,9 +19,6 @@ const descErr = document.querySelector(".descErr");
 const descriptionInput = document.getElementById("descriptionInput");
 const assignTo = document.getElementById("assignInput");
 const dueDate = document.getElementById("date");
-const taskStatus = document.getElementById("status-id");
-
-
 
 function validateNameInput() {
   if (nameInput.value.length < 8) {
@@ -82,11 +79,9 @@ getDate()
 //Adding a class
 
 
-
-
   // let id = Math.random().toString(16).slice(2);
   // console.log(id)
-  class TaskManager {
+class TaskManager {
     constructor(name, assign, dueDate2, description, status, id) {
       this.name = name;
       this.assign = assign;
@@ -113,7 +108,7 @@ function addItem(addItemToArray){
    ' </p>\n' +
    '  </div>\n' +
    '<p class="task-status"><strong>Status : '+addItemToArray.status+'</strong></p>\n' +
-   '<button type="button" class="btn btn-outline-success">\n' +
+   '<button type="button" class="btn btn-outline-success" id="doneTaskBtn">\n' +
    ' Done\n' +
  ' </button>\n' +
     '<button type="button" class="btn btn-outline-danger">\n' +
@@ -127,9 +122,7 @@ function addItem(addItemToArray){
   toarray.unshift(newCard);
 }
 
-
-
-   function createCard() {
+function createCard() {
     if (
       nameInput.value &&
       nameInput.value.length >= 8 &&
@@ -161,23 +154,11 @@ function addItem(addItemToArray){
     console.log(addItemToArray);
     console.log(toarray);
     //localStorage.setItem('toarray', JSON.stringify(addItemToArray));
+
 }};
-submit.addEventListener("click", createCard);
 
 
 
-
-// function doneToDo () {
-//   let optionSelectedText = document.getElementById("status-id").value;
-//   console.log(optionSelectedText)
-
-// }
-// doneTaskBtn.addEventListener("click", doneToDo)
-// doneToDo()
-// doneTaskBtn.addEventListener("click", () => {
-//   let optionSelectedText = document.getElementById("status-id").value;
-//   console.log(optionSelectedText)
-// });
 
 
 
