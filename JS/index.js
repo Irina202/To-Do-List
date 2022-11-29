@@ -80,10 +80,6 @@ function getDate () {
 getDate()
 
 //Adding a class
-
-
-
-
   // let id = Math.random().toString(16).slice(2);
   // console.log(id)
   class TaskManager {
@@ -100,28 +96,27 @@ getDate()
 let toarray = [];
 let i = 0;
 
-function addItem(item) {
-    
+function addItem(item) {    
   const itemHTML = '<div class="card">\n' +
   '<div class="card-body" id='+ i +'>\n' +
-   ' <h5 class="card-name"><strong>Task name:</strong>'+item.name+'</h5>\n' +
-   ' <h6 class="card-date mb-2 text-muted">Due Date: '+item.dueDate+'</h6>\n' +
-   '<p class="task-status output"><strong>Assign to : '+item.assign+'</strong></p>\n' +
-   '<div class="card-scroll">\n'+
-    '<p class="card-description">\n' +
-     ' <strong>Description:</strong>\n' +
-     ' '+item.description+'\n' +
-   ' </p>\n' +
-   '  </div>\n' +
-   '<p class="task-status"><strong>Status : '+item.status+'</strong></p>\n' +
-   '<button type="button" class="btn btn-outline-success">\n' +
-   ' Done\n' +
- ' </button>\n' +
-    '<button type="button" class="btn btn-outline-danger">\n' +
-     ' Delete\n' +
-   ' </button>\n' +
-'  </div>\n' +
-'</div>';
+  ' <h5 class="card-name"><strong>Task name:</strong>'+item.name+'</h5>\n' +
+  ' <h6 class="card-date mb-2 text-muted">Due Date: '+item.dueDate2+'</h6>\n' +
+  '<p class="task-status output"><strong>Assign to : '+item.assign+'</strong></p>\n' +
+  '<div class="card-scroll">\n'+
+  '<p class="card-description">\n' +
+  ' <strong>Description:</strong>\n' +
+  ' '+item.description+'\n' +
+  ' </p>\n' +
+  '  </div>\n' +
+  '<p class="task-status"><strong>Status : '+item.status+'</strong></p>\n' +
+  '<button type="button" class="btn btn-outline-success">\n' +
+  ' Done\n' +
+  ' </button>\n' +
+  '<button type="button" class="btn btn-outline-danger">\n' +
+  ' Delete\n' +
+  ' </button>\n' +
+  '  </div>\n' +
+  '</div>';
   i=item.id;
   const itemsContainer = document.getElementById("additem");
   itemsContainer.innerHTML += itemHTML;
@@ -153,7 +148,7 @@ function addItem(item) {
       'dueDate' : dueDate2,
       'assign' : assignName,
       'status' : optionSelectedText,
-       };
+    };
 
     addItem(addItemToArray);
     let newCard = new TaskManager(addItemToArray.name, addItemToArray.assign, addItemToArray.dueDate, addItemToArray.description, addItemToArray.status, i);
@@ -161,25 +156,23 @@ function addItem(item) {
     
     form.reset();
     console.log(addItemToArray);
-        console.log(toarray);
-        localStorage.setItem('toarray', JSON.stringify(toarray));
+    console.log(toarray);
+    localStorage.setItem('toarray', JSON.stringify(toarray));
 }};
+
 submit.addEventListener("click", createCard);
+
 
 function getCards() {
   let lArray = localStorage.getItem('toarray');
     if (lArray !== null) {
-        toarray = JSON.parse(lArray);
-        console.log(toarray);
-        toarray.forEach(addItem);
-    
-  };
+      toarray = JSON.parse(lArray);
+      console.log(toarray);
+      toarray.forEach(addItem);
+   };
 };
 
  
-
-
-
 
 // function doneToDo () {
 //   let optionSelectedText = document.getElementById("status-id").value;
