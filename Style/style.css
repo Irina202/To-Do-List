@@ -84,10 +84,28 @@ button .close {
 }
 
 .card-description {
-  max-height: 70px;
-  overflow: scroll;
-}
 
+  height: 150px;
+  overflow: scroll;
+  margin: 0rem;
+}
+::-webkit-scrollbar-thumb {
+  background: lightgray;
+  border-radius: 10px;
+}
+::-webkit-scrollbar {
+  width: 20px;
+}
+::-webkit-scrollbar-corner{
+  color: var(--blue);
+}
+::-webkit-scrollbar-thumb {
+  background:lightgray;
+  border-radius: 20px;
+}
+::-webkit-scrollbar {
+  width: 15px;
+}
 .card-body {
   background-color: var(--blue);
 }
