@@ -130,12 +130,19 @@ function addItem(addItemToArray){
 
 
    function createCard() {
+    if (
+      nameInput.value &&
+      nameInput.value.length >= 8 &&
+      descriptionInput.value.length >= 15 &&
+      dueDate.value &&
+      new Date(dueDate.value) > new Date()
+    ){
     let taskName = nameInput.value;
     let assignName = assignTo.value;
     let dueDate2 = dueDate.value;
     let description = descriptionInput.value;
     let optionSelectedText = document.getElementById("status-id").value;
-    
+
     i += 1;
 
     let addItemToArray = {
@@ -146,7 +153,7 @@ function addItem(addItemToArray){
       'assign' : assignName,
       'status' : optionSelectedText,
        }
-    
+
     addItem(addItemToArray);
 
     const form = document.getElementById('myform');
@@ -154,7 +161,7 @@ function addItem(addItemToArray){
     console.log(addItemToArray);
     console.log(toarray);
     //localStorage.setItem('toarray', JSON.stringify(addItemToArray));
-};
+}};
 submit.addEventListener("click", createCard);
 
 
